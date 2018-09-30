@@ -29,61 +29,61 @@ Vue.use(iView);
 window.$ = $;
 
 var router = new VueRouter({
-	routes:[{
-		path:"/index",
-		component:index,
-		children:[{
-			path:"hots",
-			component:hots,
-			children:[{
-				path:"played",
-				component:played,
-			},{
-				path:"preview",
-				component:preview
-			},{
-				path:"/",
-				redirect:"/index/hots/played"
-			}]
-		},{
-			path:"find",
-			component:find,
-		},{
-			path:"user",
-			component:user,
-		}]
-	},{
-		path:"/detail/:id",
-		component:detail,
-		children:[{
-			path:"comments",
-			component:comments
-		},{
-			path:"reviews",
-			component:reviews
-		},{
-			path:"/",
-			redirect:"/detail/:id/comments"
-		}]
-	},{
-		path:"/login",
-		component:login
-	},{
-		path:"/register",
-		component:register
-	},{
-		path:"/success",
-		component:success
-	},{
-		path:"/",
-		redirect:"/index/hots/played"
-	}]
+    routes: [{
+        path: "/index",
+        component: index,
+        children: [{
+            path: "hots",
+            component: hots,
+            children: [{
+                path: "played",
+                component: played,
+            }, {
+                path: "preview",
+                component: preview
+            }, {
+                path: "/",
+                redirect: "/index/hots/played"
+            }]
+        }, {
+            path: "find",
+            component: find,
+        }, {
+            path: "user",
+            component: user,
+        }]
+    }, {
+        path: "/detail/:id",
+        component: detail,
+        children: [{
+            path: "comments",
+            component: comments
+        }, {
+            path: "reviews",
+            component: reviews
+        }, {
+            path: "/",
+            redirect: "/detail/:id/comments"
+        }]
+    }, {
+        path: "/login",
+        component: login
+    }, {
+        path: "/register",
+        component: register
+    }, {
+        path: "/success",
+        component: success
+    }, {
+        path: "/",
+        redirect: "/index/hots/played"
+    }]
 });
 
 new Vue({
-	el: "#demo",
-	data:{
-		test:"ok"
-	},
-	router
+    el: "#demo",
+    data: {
+        test: "ok"
+    },
+    router
 });
