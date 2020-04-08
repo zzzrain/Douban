@@ -2,8 +2,8 @@
 import Vue from "vue"
 import VueRouter from "vue-router"
 // 加载UI(单独引入css可否完善？？)
-import iView from 'iview'
-import 'iview/dist/styles/iview.css'
+// import iView from 'iview'
+// import 'iview/dist/styles/iview.css'
 // 加载jq
 import $ from "jquery"
 // 首页
@@ -25,7 +25,7 @@ import register from "./components/register.vue"
 import success from "./components/success.vue"
 
 Vue.use(VueRouter);
-Vue.use(iView);
+// Vue.use(iView);
 window.$ = $;
 
 var router = new VueRouter({
